@@ -37,6 +37,7 @@
 		<button onclick="makeNewDiv()">Add value</button>
 		<button onclick="get()">Get</button>
 		<button onclick="delay()">Delay</button>
+		<button onclick="promote()">Promote</button>
 	
 	
 </body>
@@ -79,6 +80,19 @@
 
 		}
 		
+	}
+
+	function promote(){
+		let queueItems = []
+		queueItems = document.getElementsByClassName('delayQ')
+		let queueLen = queueItems.length
+		let randomIndex = Math.floor(Math.random()*queueLen)
+		removedItem = queueItems[randomIndex]
+		queueItems[randomIndex].remove()
+		let container = document.getElementById('target')
+		container.insertBefore(removedItem,container.lastChild)
+
+
 	}
 	
 </script>

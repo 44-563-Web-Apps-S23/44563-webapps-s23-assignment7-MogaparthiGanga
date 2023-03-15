@@ -20,6 +20,7 @@
         <p id="penaltyId" class="text-primary">Penalty is zero.</p>
         <p class="text-info" onclick="help()">Click for help.</p>
         <p id="help" class="text-info">Help report</p>
+        <div><button onclick="bonus()">Bonus</button></div>
         <div class="container row">
             <div class="col-sm-2">
                 <img src="bush.jpg" alt="Bush Image" height="150" width="150" id="image0" onclick="check(0)">
@@ -171,6 +172,14 @@
                     penalty+=2
                     penaltyId.innerHTML="Penalty is "+penalty;  
                 }
+            }
+            function bonus(){
+                checkCount = 0;
+                penalty = 0; 
+                mouseLocation = Math.floor(Math.random()*(23-0+1),0)
+                catLocation = Math.floor(Math.random()*(23-0+1),0)
+                penaltyId.innerHTML="Penalty is "+penalty; 
+                bushes.innerHTML="Number of bushes checked is "+checkCount;
             }
 
         </script>

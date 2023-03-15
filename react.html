@@ -24,7 +24,8 @@
   <script> 
   let reactTime = undefined;
   function startTime() {
-    for(var i =0; i<9;i++){
+    let randomValue = Math.floor((Math.random()*(10-2+1))+2)
+    for(var i =2; i<=randomValue;i++){
       setTimeOut(i);
     }
       setTimeout(()=>{
